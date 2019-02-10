@@ -1,0 +1,35 @@
+/* BMI Calculator */
+
+.align-data{
+  text-align: center;
+  background-color: #e4406f;
+  color: black;
+  padding: 5% 15%;
+}
+
+h1, h2, h3{
+  font-family: Montserrat-Black;
+}
+h1{
+  color: white;
+}
+.fa-color, .icon-color{
+  color: #e4406f;
+  padding-bottom: 2%;
+}
+.button-padding{
+  margin: 5% 0 5%;
+  padding: 2%;
+}
+.padding-card{
+  padding-bottom: 10%
+}
+.categories-align{
+  text-align: left;
+  padding-left: 30%;
+}
+.output-result{
+margin: 0;
+  color: #e4406f;
+  padding: 0;
+}

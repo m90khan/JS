@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bmi Calculator</title>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada|Ubuntu" rel="stylesheet">
+<!-- font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+<div class="row align-data container-fluid">
+  <div class="col-lg-12 padding-card">
+    <h1>BMI Calculator <br>(Body-Mass Index) </h1>
+  </div>
+  <!-- </div>
+<div class="row align-data container-fluid"> -->
+  <div class="card col-lg-6 ">
+      <div class="card-header">
+          <i class="fas fa-tachometer-alt fa-4x fa-color"></i>
+  <h2>Enter your details to get results</h2>
+      </div>
+      <div class="card-body">
+        <form>
+            <input type="number" class="form-control"  placeholder="Your Weight in kg (kilograms) ..."id="weight" required><br>
+            <input type="number" class="form-control"  placeholder="Your height in meters ..." id="meter" required><br>
+            <button type="button" onclick="bmi();" class="btn-block btn-dark btn-lg button-padding">Show me My BMI</button>
+       </form>
+
+      </div>
+    </div>
+  <div class="card col-lg-6">
+      <div class="card-header">
+          <i class="fas fa-book fa-4x fa-color"></i>
+  <h2>BMI Categories</h2>
+      </div>
+      <div class="card-body categories-align">
+    <p><i class="fas fa-check-circle icon-color"></i>Underweight = <18.5</p>
+    <p><i class="fas fa-check-circle icon-color"></i>Normal weight = 18.5–24.9</p>
+    <p><i class="fas fa-check-circle icon-color"></i>Overweight = 25–29.9</p>
+    <p><i class="fas fa-check-circle icon-color"></i>Obesity = BMI of 30 or greater</p>
+      <h3 id="output" class="output-result"></h3>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  function bmi(){
+    var w = document.getElementById("weight").value;
+    var m = document.getElementById("meter").value;
+    //   // Display output on to field
+
+  var bmiCalc = Math.round((w/(m*2)));
+if (isNaN (bmiCalc)){
+  return document.querySelector("#output").innerHTML= "Hey: I am not a magician";
+
+}
+document.querySelector("#output").innerHTML = ("Result: "+  bmiCalc);
+}
+
+</script>
+</body>
+</html>
